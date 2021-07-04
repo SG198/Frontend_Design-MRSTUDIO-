@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* header part */
+header{
+    position: fixed;
+    padding: 20px 50px;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 10000;
+    align-items: center;
+    transition: 0.5s;
+    /*The z-index property specifies the stack order of an element.
+
+An element with greater stack order is always in front of an element with a lower stack order.
+
+Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky).*/
+}
+
+header .logo{
+    color: rgb(12, 1, 1);
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header .navigation{
+    position: relative;
+    display: flex;
+}
+
+header .navigation li{
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigation li a{
+  text-decoration: none;
+  color: #111111;
+  font-weight: 300;
+}
+header.sticky{
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+header.sticky .logo{
+    color: #111;
+}
+
+header.sticky .navigation li a{
+    color: #111;
+}
+
+header .navigation li a:hover{
+    color: #ff0157;
+}
+.btn{
+    border: none;
+    background: rgb(12, 143, 12);
+    padding: 10px;
+    border-radius: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+section{
+    margin-top: 100px;
+}
+.firstContainer{
+    margin: 0 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.rightContainer{
+    width: 40%;
+}
+.rightContainer .Htext,.Ptext,.search{
+    margin-top: 10px;
+}
+.rightContainer .Htext{
+    font-weight: bolder;
+    font-size: 45px;
+}
+.rightContainer .Htext .green{
+    color: rgb(62, 122, 62);
+}
+.rightContainer .Htext .blue{
+    color: rgb(134, 134, 243);
+}
+.rightContainer .search{
+    padding: 10px 0;
+    outline: none;
+    text-align: center;
+    border:1px solid green;
+    background: green;
+}
+.leftContainer img{
+    width: 400px;
+    height: 400px;
+}
+.leftContainer .modelImage{
+    box-shadow: 0 5px 35px rgba(14, 14, 14, 0.226);
+    margin-top: 20px;
+}
+.leftContainer .card{
+    width: 200px;
+    background: brown;
+    color: #ffffff;
+    text-align: center;
+    border: 2px solid wheat;
+    position: relative;
+    bottom: 20%;
+    left: 60%;
+}
+.leftContainer .card h3,h4,p,button{
+    margin: 10px;
+}
+.secondContainer,.thirdContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 100px;
+}
+.heading{
+   width: 400px;
+   display: flex;
+   flex-direction: column;
+}
+.heading .Ptext{
+    text-transform: uppercase;
+    color: #ff0157;
+    font-weight: 700;
+}
+.heading .Htext{
+    font-size: 35px;
+}
+.subContainer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.subContainer .box{
+    width: 30%;
+    margin-left: 20px;
+}
+.subContainer .box i{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+.subContainer .box h3,p{
+    margin: 15px 0 0 0;
+
+}
+
+.thirdContainer .heading2,.fourthContainer .heading3{
+    width: 400px;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+.heading2 .Htext{
+    font-size: 30px;
+}
+.thirdContainer .box i{
+    background-color: #111111;
+    color: #ffffff;
+    padding: 5px 15px;
+}
+.thirdContainer .box{
+    width: 25%;
+    border: 5px solid rgb(165, 159, 159);
+    border-radius: 20px;
+    margin-left: 70px;
+}
+.thirdContainer .box .content{
+    padding:5px 0 0 10px ;
+}
+.thirdContainer .box .content .logoPics img{
+    width: 200px;
+    height: 200px;
+    margin-top: 15px;
+}
+.fourthContainer .heading3{
+    width: 700px;
+}
+#myButton{
+    padding: 10px;
+    background: orangered;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.fourthContainer{
+    background: rgb(173, 173, 122);
+     padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.fourthContainer .subContainer{
+    margin-top: 30px;
+}
+.fourthContainer .box i{
+    font-size: 40px;
+    border: none;
+}
+.myFooter{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.social{
+    margin-top: 15px;
+}
+.social i{
+   width: 60px;
+   height: 60px;
+}
+i{
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width:891px){
+    .thirdContainer .subContainer{
+        flex-direction: column;
+    }
+    .thirdContainer .subContainer .box{
+        width: 400px;
+        margin-top: 10px;
+    }
+    .leftContainer img{
+        width: 350px;
+        height: 400px;
+    }
+    
+}
+@media (max-width:800px){
+    header.sticky{
+        padding:10px 20px;
+    }
+    header .navigation{
+        display: none;
+    }
+   .togglemenu{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    header .navigation.active{
+        width: 100%;
+        height: calc(100%-68px);
+        position: fixed;
+        top: 88px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: #fff;
+    }
+
+    header .navigation li{
+         margin-left: 0;
+    }
+
+    header .navigation li a{
+        color: #111;
+        font-size: 1.6em;
+    }
+
+    .togglemenu.active{
+        background: url(close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    header.sticky .togglemenu{
+        filter: invert(1);
+    }
+    .thirdContainer .subContainer .box{
+        width: 300px;
+        margin-top: 10px;
+    }
+    .fourthContainer .heading3{
+        width: 500px;
+    }
+}
+@media (max-width:599px){
+    .rightContainer{
+        width: 70%;
+    }
+    .subContainer{
+        flex-direction: column;
+    }
+    .subContainer .box{
+        width: 50%;
+       margin-top: 20px;
+    }
+    header{
+        flex-direction: column;
+    }
+}
+@media (max-width:499px){
+    .leftContainer img{
+        width: 300px;
+        height: 300px;
+    }
+    .leftContainer .modelImage{
+        box-shadow: 0 5px 35px rgba(14, 14, 14, 0.226);
+        margin-top: 20px;
+    }
+    .leftContainer .card{
+        width: 200px;
+        background: brown;
+        color: #ffffff;
+        text-align: center;
+        border: 2px solid wheat;
+        left: 20%;
+    }
+    .heading{
+        width: 200px;
+        text-align: center;
+    }
+    .fourthContainer .heading3{
+        width: 300px;
+    }
+    .thirdContainer .heading2{
+        width: 300px;
+    }
+    .thirdContainer .subContainer .box{
+        width: 300px;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+@media (max-width:499px){
+    .thirdContainer .subContainer .box{
+        width: 250px;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
